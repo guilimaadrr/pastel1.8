@@ -73,59 +73,64 @@ body {
 /* Estilos do cabeçalho */
 header {
   text-align: center;
-  width: 90%; /* Aumenta a largura para se ajustar melhor em telas pequenas */
-  max-width: 400px; /* Largura máxima para evitar excessos */
-  height: auto; /* Altura automática para ajustar ao conteúdo */
-  margin: 0 auto 20px; /* Centraliza e define a margem inferior */
-  padding: 20px; /* Adiciona espaçamento interno */
-  border-radius: 50%; /* Mantém o cabeçalho redondo */
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto 20px;
+  padding: 20px;
+  border-radius: 30px; /* Borda arredondada mais leve */
   overflow: hidden;
   display: flex;
-  flex-direction: column; /* Permite que o conteúdo empilhe verticalmente */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(
-    255,
-    255,
-    255,
-    0.1
-  ); /* Fundo semi-transparente para destaque */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
-  user-select: none; /* Impede a seleção do cabeçalho */
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); /* Sombra mais suave */
+  user-select: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Interação para um destaque sutil */
+header:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilos para o título dentro do cabeçalho */
 header h1 {
-  font-size: 1.6rem; /* Reduz o tamanho da fonte para dispositivos móveis */
-  color: #ffffff; /* Cor do texto */
-  margin: 0; /* Remove margens para um layout mais limpo */
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.3;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilos para o container principal */
 .container {
   text-align: center;
-  width: 90%; /* Aumenta a largura para se ajustar melhor em telas pequenas */
-  max-width: 600px; /* Define uma largura máxima para o container */
-  height: auto; /* Ajusta a altura do container conforme o conteúdo */
-  margin: 0 auto; /* Centraliza o container */
-  padding: 20px; /* Adiciona espaçamento interno para o container */
-  border-radius: 15px; /* Bordas arredondadas para um visual suave */
-  background: rgba(255, 255, 255, 0.05); /* Fundo leve para destaque */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra leve para profundidade */
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease;
 }
 
 /* Estilos responsivos adicionais */
 @media (max-width: 600px) {
-  header h1 {
-    font-size: 1.4rem; /* Ajusta o tamanho da fonte em telas menores */
+  header {
+    padding: 15px;
+    border-radius: 50%;
   }
 
-  header {
-    padding: 15px; /* Reduz o padding para um layout mais compacto */
+  header h1 {
+    font-size: 1.4rem;
   }
 
   .container {
-    padding: 15px; /* Reduz o padding no container para dispositivos móveis */
+    padding: 15px;
+    border-radius: 10px;
   }
 }
 
@@ -150,12 +155,6 @@ h1 {
   max-width: 90%; /* Limita a largura do título em telas pequenas */
   margin: 0 auto; /* Centraliza o título horizontalmente */
   padding: 0 10px; /* Adiciona um padding lateral para evitar que o texto encoste nas bordas */
-}
-
-/* Efeitos de transição suave ao passar o mouse */
-h1:hover {
-  transform: translateY(-2px); /* Leve movimento para cima ao passar o mouse */
-  transition: transform 0.3s ease; /* Transição suave */
 }
 
 /* Estilo adicional para telas menores */
@@ -287,13 +286,6 @@ h1:hover {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
     /* Brilho suave ao redor do texto */ 0 0 20px rgba(0, 0, 0, 0.7); /* Brilho mais intenso para um efeito neon */
   transition: transform 0.3s ease; /* Adiciona transição suave ao hover */
-}
-
-/* Efeito de hover no título */
-.modal h2:hover {
-  transform: translateY(
-    -2px
-  ); /* Levanta o título levemente ao passar o mouse */
 }
 
 /* ==============================
