@@ -160,7 +160,7 @@ h1 {
 /* Estilo adicional para telas menores */
 @media (max-width: 600px) {
   h1 {
-    font-size: 1.5rem; /* Ajusta o tamanho da fonte para telas menores */
+    font-size: 1.8rem; /* Ajusta o tamanho da fonte para telas menores */
     line-height: 1.4; /* Aumenta o espaçamento entre linhas para melhor legibilidade */
     padding: 0 10px; /* Ajusta o padding para telas menores */
     margin-bottom: 20px;
