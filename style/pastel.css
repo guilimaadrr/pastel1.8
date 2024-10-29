@@ -147,7 +147,7 @@ h1 {
   -webkit-background-clip: text; /* Aplica o gradiente ao texto (Chrome, Safari) */
   background-clip: text; /* Aplica o gradiente ao texto (Firefox) */
   -webkit-text-fill-color: transparent; /* Torna o texto transparente (Chrome, Safari) */
-  font-family: "Apple Chancery, cursive"; /* Fonte padrão */
+  font-family: "Snell Roundhand, cursive"; /* Fonte padrão */
   display: inline-block; /* Necessário para o clipping */
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4); /* Sombra do texto para maior profundidade */
   text-align: center; /* Centraliza o título */
@@ -160,7 +160,7 @@ h1 {
 /* Estilo adicional para telas menores */
 @media (max-width: 600px) {
   h1 {
-    font-size: 1.6rem; /* Ajusta o tamanho da fonte para telas menores */
+    font-size: 1.5rem; /* Ajusta o tamanho da fonte para telas menores */
     line-height: 1.4; /* Aumenta o espaçamento entre linhas para melhor legibilidade */
     padding: 0 10px; /* Ajusta o padding para telas menores */
     margin-bottom: 20px;
@@ -376,6 +376,18 @@ h1 {
   margin-right: 10px; /* Espaço entre o checkbox e o texto */
   transform: scale(1); /* Aumenta o tamanho do checkbox */
   cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+/* Estilo para o P do 3º modal */
+.obs-massa {
+  background-color: #f4f4f4; /* Cor de fundo suave */
+  border-left: 4px solid #b40000; /* Borda colorida à esquerda */
+  margin-top: -15px; /* Espaçamento acima */
+  margin-bottom: 10px;
+  padding: 0px 12px;
+  border-radius: 6px; /* Bordas arredondadas */
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #570101; /* Cor do texto */
 }
 
 /* ===========================
