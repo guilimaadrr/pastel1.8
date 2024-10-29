@@ -147,7 +147,7 @@ h1 {
   -webkit-background-clip: text; /* Aplica o gradiente ao texto (Chrome, Safari) */
   background-clip: text; /* Aplica o gradiente ao texto (Firefox) */
   -webkit-text-fill-color: transparent; /* Torna o texto transparente (Chrome, Safari) */
-  font-family: "Montserrat", sans-serif; /* Fonte padrão */
+  font-family: "Apple Chancery, cursive", sans-serif; /* Fonte padrão */
   display: inline-block; /* Necessário para o clipping */
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4); /* Sombra do texto para maior profundidade */
   text-align: center; /* Centraliza o título */
