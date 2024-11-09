@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cantinho do Pastel</title>
     <link rel="stylesheet" href="style/pastel.css" />
-    <link rel="icon" href="img/favicon_io/android-chrome-512x512.png" type="image/x-icon">
+    <link
+      rel="icon"
+      href="img/favicon_io/android-chrome-512x512.png"
+      type="image/x-icon"
+    />
     <script src="script.js" defer></script>
     <!-- Cor da barra de status no Android -->
     <meta name="theme-color" content="#570101" />
@@ -17,6 +21,7 @@
   </head>
   <body>
     <header>
+      <div class="logo-container">
       <img src="img/logohallowen.png" alt="Logo Cantinho do Pastel" />
     </header>
 
@@ -24,10 +29,10 @@
       <h1>Escolha e Monte Seu Pastel !</h1>
       <section class="pastel-options">
         <button class="image-button" onclick="openModal('modal1')">
-          <img src="img/Pastel rs9,00.png" alt="Imagem de Pastel 1" />
+          <img src="img/Pastel rs10.png" alt="Imagem de Pastel 1" />
         </button>
         <button class="image-button" onclick="openModal('modal2')">
-          <img src="img/Pastel rs12.png" alt="Imagem de Pastel 2" />
+          <img src="img/Pastel rs13.png" alt="Imagem de Pastel 2" />
         </button>
         <button class="image-button" onclick="openModal('modal3')">
           <img src="img/Pastel rs27.png" alt="Imagem de Pastel 3" />
@@ -36,10 +41,10 @@
           <img src="img/GELADOS.png" alt="Imagem de Bebidas" />
         </button>
         <button class="image-button" onclick="openModal('modalDoces')">
-          <img src="img/Doces.png" alt="Imagem de Doces" />
+          <img src="img/Pastel Doce.png" alt="Imagem de Doces" />
         </button>
         <button class="image-button" onclick="openModal('modalSalgados')">
-          <img src="img/Salgados.png" alt="Imagem de Salgados" />
+          <img src="img/docesalgados.png" alt="Imagem de Salgados" />
         </button>
       </section>
       <button id="viewCart" onclick="openCart()">Ver Carrinho</button>
@@ -57,7 +62,7 @@
       </div>
 
       <!-- Modal 1 -->
-      <div id="modal1" class="modal" style="display: none" data-price="9.00">
+      <div id="modal1" class="modal" style="display: none" data-price="10.00">
         <div class="modal-content">
           <span class="close" onclick="closeModal('modal1')">&times;</span>
           <h2>Monte Seu Pastel (Máximo 3 Sabores)</h2>
@@ -228,7 +233,7 @@
           <input type="text" id="nome1" placeholder="Seu nome" />
           <button
             class="submit"
-            onclick="submitIngredients('sabor1', 'complemento1', 'molho1', 'nome1', 9)"
+            onclick="submitIngredients('sabor1', 'complemento1', 'molho1', 'nome1', 10)"
           >
             Enviar ao Carrinho
           </button>
@@ -236,7 +241,7 @@
       </div>
 
       <!-- Modal 2 -->
-      <div id="modal2" class="modal" style="display: none" data-price="12.00">
+      <div id="modal2" class="modal" style="display: none" data-price="13.00">
         <div class="modal-content">
           <span class="close" onclick="closeModal('modal2')">&times;</span>
           <h2>Monte Seu Pastel (Máximo 5 Sabores)</h2>
@@ -407,7 +412,7 @@
           <input type="text" id="nome2" placeholder="Seu nome" />
           <button
             class="submit"
-            onclick="submitIngredients('sabor2', 'complemento2', 'molho2', 'nome2', 12)"
+            onclick="submitIngredients('sabor2', 'complemento2', 'molho2', 'nome2', 13)"
           >
             Enviar ao Carrinho
           </button>
@@ -419,7 +424,9 @@
         <div class="modal-content">
           <span class="close" onclick="closeModal('modal3')">&times;</span>
           <h2>Monte Seu Pastel (Máximo 9 Sabores)</h2>
-          <p class="obs-massa">Obs: Duas massas de pastel com recheio à sua escolha.</p>
+          <p class="obs-massa">
+            Obs: Duas massas de pastel com recheio à sua escolha.
+          </p>
           <div class="ingredient-list">
             <h3>Sabores</h3>
             <label
@@ -687,76 +694,43 @@
         </div>
       </div>
 
-      <!-- Modal Doces 
+      <!-- Modal Pastel Doce 
       <div id="modalDoces" class="modal" style="display: none">
         <div class="modal-content">
           <span class="close" onclick="closeModal('modalDoces')">&times;</span>
-          <h2>Sobremesas</h2>
+          <h2>Pastel Doces</h2>
           <div class="ingredient-list">
-            <label>
+
+           <!-- <label>
               <input
                 type="checkbox"
                 name="saborDoces"
-                value="Brigadeiro"
-                data-price="7.00"
+                value="Bolo Ninho/Morango "
+                data-price="10.00"
               />
-              Brigadeiro - R$7,00
+              Bem Casado - R$10,00
             </label>
             <label>
               <input
                 type="checkbox"
                 name="saborDoces"
-                value="Beijinho"
-                data-price="7.00"
+                value="Doce De Leite"
+                data-price="10.00"
               />
-              Beijinho - R$7,00
+              Doce De Leite - R$10,00
             </label>
             <label>
               <input
                 type="checkbox"
                 name="saborDoces"
-                value="Chocolate"
-                data-price="7.00"
+                value="Delicia de Abacaxi"
+                data-price="10.00"
               />
-              Chocolate - R$7,00
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                name="saborDoces"
-                value="Doce de Leite"
-                data-price="7.00"
-              />
-              Doce de Leite - R$7,00
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                name="saborDoces"
-                value="Morango"
-                data-price="7.00"
-              />
-              Morango - R$7,00
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                name="saborDoces"
-                value="Nutella"
-                data-price="7.00"
-              />
-              Nutella - R$7,00
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                name="saborDoces"
-                value="Leite Ninho"
-                data-price="7.00"
-              />
-              Leite Ninho - R$7,00
-            </label>
-          </div>
+              Delicia de Abacaxi - R$10,00
+            </label>  
+            
+             
+          </div> 
           <input type="text" id="nomeDoces" placeholder="Seu nome" />
           <button
             class="submit"
@@ -765,9 +739,9 @@
             Enviar ao Carrinho
           </button>
         </div>
-      </div> -->
+      </div>
 
-      <!-- Modal Salgados 
+       Modal Salgados
       <div id="modalSalgados" class="modal" style="display: none">
         <div class="modal-content">
           <span class="close" onclick="closeModal('modalSalgados')"
@@ -775,7 +749,7 @@
           >
           <h2>Salgados</h2>
           <div class="ingredient-list">
-            <label>
+             <label>
               <input
                 type="checkbox"
                 name="tipoSalgados"
@@ -802,42 +776,7 @@
               />
               Risole - R$5,00
             </label>
-            <label>
-              <input
-                type="checkbox"
-                name="tipoSalgados"
-                value="Empada"
-                data-price="5.00"
-              />
-              Empada - R$5,00
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                name="tipoSalgados"
-                value="Kibe"
-                data-price="5.00"
-              />
-              Kibe - R$5,00
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                name="tipoSalgados"
-                value="Pastel de Forno"
-                data-price="5.00"
-              />
-              Pastel de Forno - R$5,00
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                name="tipoSalgados"
-                value="Enroladinho de Salsicha"
-                data-price="5.00"
-              />
-              Enroladinho - R$5,00
-            </label>
+            
           </div>
           <input type="text" id="nomeSalgados" placeholder="Seu nome" />
           <button
@@ -847,13 +786,167 @@
             Enviar ao Carrinho
           </button>
         </div>
-         -->
+      </div> -->
+      <!-- Modal Admin -->
+      <div id="modalAdmin" class="modal" style="display: none">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modalAdmin')">&times;</span>
+          <h2>Administração - Controle de Itens</h2>
+          <div class="control-list">
+           <h3>Doces</h3>
+            <label>
+              <input
+                type="checkbox"
+                class="admin-control"
+                data-target="Bolo Ninho Com Morango "
+                checked
+              />
+              Bolo Ninho Com Morango
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="admin-control"
+                data-target="Beijinho"
+                checked
+              />
+              Beijinho
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="admin-control"
+                data-target="Chocolate"
+                checked
+              />
+              Chocolate
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="admin-control"
+                data-target="Doce de Leite"
+                checked
+              />
+              Doce de Leite
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="admin-control"
+                data-target="Morango"
+                checked
+              />
+              Morango
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="admin-control"
+                data-target="Nutella"
+                checked
+              />
+              Nutella
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="admin-control"
+                data-target="Leite Ninho"
+                checked
+              />
+              Leite Ninho
+            </label>
+
+            <h3>Salgados</h3>
+            <label>
+              <input
+                type="checkbox"
+                class="admin-control"
+                data-target="Coxinha"
+                checked
+              />
+              Coxinha
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="admin-control"
+                data-target="Esfiha"
+                checked
+              />
+              Esfiha
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="admin-control"
+                data-target="Risole"
+                checked
+              />
+              Risole
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="admin-control"
+                data-target="Empada"
+                checked
+              />
+              Empada
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="admin-control"
+                data-target="Kibe"
+                checked
+              />
+              Kibe
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="admin-control"
+                data-target="Pastel de Forno"
+                checked
+              />
+              Pastel de Forno
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="admin-control"
+                data-target="Enroladinho de Salsicha"
+                checked
+              />
+              Enroladinho de Salsicha
+            </label>
+          </div>
+          <button class="submit" onclick="closeModal('modalAdmin')">
+            Salvar Configurações
+          </button>
+        </div>
       </div>
     </main>
+    <!-- Ícone flutuante -->
+    <div id="loginIcon" class="floating-icon">🔑</div>
+
+    <!-- Modal de login -->
+    <div id="loginModal" class="modallogin">
+      <div class="modallogin-content">
+        <span class="close">&times;</span>
+        <h2 class="adm-title">ADM</h2>
+        <form>
+          <label for="password" class="access-label">Código de Acesso:</label>
+          <input type="password" id="password" name="password" />
+          <button type="submit">Entrar</button>
+        </form>
+      </div>
+    </div>
+
     <footer>
       <p>&copy; 2015 Cantinho do Pastel. Todos os direitos reservados.</p>
-    </footer>  
-    
-    
+    </footer>
   </body>
 </html>
